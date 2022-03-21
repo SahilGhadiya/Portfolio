@@ -1,0 +1,58 @@
+extends base.pug
+
+block style
+  style
+    include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+    include ../static/css/style.css
+    include ../static/css/message-style.css
+    include ../static/css/mediaquery.css
+
+block body
+  .container
+    // Form Box
+    h4.text-center.m-5.fs-1 Contact Us
+    .contact-form
+      form(method='post' action='/message')
+        .row.clearfix
+          //- .field-group.col-lg-6.col-md-6.col-sm-12
+          .field-group.col-12
+            .form-group
+              label.field-label(for='name')
+                span.icon.fa.fa-user
+              input#name(type='text' name='name' value='' placeholder='Name' required='')
+            .form-group
+              label.field-label(for='email')
+                span.icon.far.fa-envelope
+              input#email(type='email' name='email' value='' placeholder='E-mail' required='')
+            .form-group
+              label.field-label(for='website')
+                span.icon.fa.fa-link
+              input#website(type='url' name='weburl' value='' placeholder='Website' required='')
+            .form-group
+              textarea#message(name='message' placeholder='Message' required='')
+            .form-group
+              button.theme-btn.btn-style-one(type='submit' data-bs-toggle='modal' data-bs-target='#exampleModal')
+                  span Send message
+          //- .field-group.col-lg-6.col-md-6.col-sm-12
+          //- .field-group.col-12
+          //-   .form-group
+          //-     textarea#message(name='message' placeholder='Message' required='')
+          //-   .form-group
+          //-     button.theme-btn.btn-style-one(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+          //-       span Send message
+    // Modal
+    .modal-dialog.modal-dialog-centered
+      #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h5#exampleModalLabel.modal-title Message
+              //- button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+              | Your Message Sent..
+            .modal-footer()
+              button.btn(type='button' data-bs-dismiss='modal' style='color:white;background-color:#495369;') Close
+
+
+  script
+    include ../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js

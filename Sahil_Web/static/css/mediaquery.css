@@ -1,0 +1,74 @@
+@media (max-width:991px) {
+    .mobile-header {
+        display: block;
+    }
+    .navbar-visible .site-container .left-bar {
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        visibility: visible;
+    }
+    .site-container .left-bar {
+        float: none;
+        margin: 0 0;
+        width: 100%;
+        max-width: none;
+        position: fixed;
+        width: auto;
+        left: 20px;
+        right: 20px;
+        top: 0px;
+        height: 100%;
+        overflow-y: auto;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: hidden;
+        -moz-transition: all 700ms ease;
+        -webkit-transition: all 700ms ease;
+        -ms-transition: all 700ms ease;
+        -o-transition: all 700ms ease;
+        transition: all 700ms ease;
+        z-index: 999;
+    }
+    .site-content-container {
+        margin-left: 0;
+    }
+    .site-container .left-bar {
+        float: none;
+        margin: 0 0;
+        width: 100%;
+        max-width: none;
+        position: fixed;
+        width: auto;
+        left: 20px;
+        right: 20px;
+        top: 0px;
+        height: 100%;
+        overflow-y: auto;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: hidden;
+        -moz-transition: all 700ms ease;
+        -webkit-transition: all 700ms ease;
+        -ms-transition: all 700ms ease;
+        -o-transition: all 700ms ease;
+        transition: all 700ms ease;
+        z-index: 999;
+    }
+}
+
+@media only screen and (max-width: 1299px){
+    .mode-switch {
+        display: none;
+        position: absolute;
+        padding-right: 20px;
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+        left: 0;
+        top: -75px;
+    }
+    .right-content .download-cv {
+        top: -30px;
+        right: -20px;
+        z-index: 1;
+    }
+}

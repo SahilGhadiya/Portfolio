@@ -1,0 +1,120 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    color: #495369;
+    line-height: 1.50em;
+    font-weight: 400;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+.body-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: #d6dde6;
+    background-position: center 100px;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+.weekend-mode .mode-switch .switcher .left-text {
+    color: #ffffff;
+}
+.weekend-mode .mode-switch .switcher .switch-btn .btn-inner {
+    border: 5px solid #adacab;
+    padding-left: 5px;
+    padding-right: 40px;
+    background: #fd7030;
+}
+.weekend-mode .mode-switch .switcher .switch-btn .circle {
+    left: auto;
+    right: 2px;
+}
+.weekend-mode .mode-switch .switcher .switch-btn .txt {
+    color: #FFFFFF;
+}
+.weekend-mode .body-bg {
+    background-position: center bottom;
+}
+.weekend-mode .weekend-content {
+    position: relative;
+    margin: 0 0;
+    border: 10px solid #ffffff;
+    background: #ffffff;
+    border-radius: 40px 0 0 50px;
+}
+.weekend-mode .weekend-content {
+    position: relative;
+    margin: 0 0;
+    border: 10px solid #ffffff;
+    background: #ffffff;
+    border-radius: 40px 0 0 50px;
+}
+.weekend-mode .weekend-content .image-column {
+    position: relative;
+    padding: 0 0;
+    border-radius: 35px 0 0 35px;
+    order: 0;
+}   
+.weekend-mode .weekend-content .text-column {
+    position: relative;
+    padding: 0 0;
+    background: #ffffff;
+    order: 12;
+}
+.weekend-mode .weekend-content .text-column .inner {
+    position: relative;
+    display: block;
+    padding: 40px 20px 120px 50px;
+    min-height: 100%;
+}
+.weekend-mode .weekend-content h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.weekend-mode .weekend-content .text p {
+    margin-bottom: 24px;
+}
+.weekend-mode .weekend-content .image-column {
+    position: relative;
+    padding: 0 0;
+    border-radius: 35px 0 0 35px;
+    order: 0;
+}   
+.weekend-mode .weekend-content .image-column .inner {
+    position: relative;
+    display: block;
+    min-height: 100%;
+}
+.weekend-mode .weekend-content .image-column .image-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 35px 0 0 35px;
+}
+.weekend-mode .weekend-content .image-column .image {
+    position: relative;
+    display: none;
+}
+.weekend-mode .weekend-content .image-column .image img {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 35px 0 0 35px;
+}
+
+.weekend-mode .weekend-content .image-column {
+    position: relative;
+    padding: 0 0;
+    border-radius: 35px 0 0 35px;
+    order: 0;
+}

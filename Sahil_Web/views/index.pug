@@ -1,0 +1,768 @@
+extends base.pug
+
+block style
+  style
+    include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+    include ../static/css/style.css
+    include ../static/css/mediaquery.css
+
+block body
+  //- First-Section Background-Image
+  .body-bg-img
+   //- Third-Section Middle Containt
+  .page-wrapper
+    .preloader(style='display: none;')
+      .icon
+    .site-container
+      .mode-switch
+        .switcher.clearfix
+          .left-text Weekend Mode
+          .switch-btn
+              .btn-inner
+                .circle
+                .txt OFF
+              a(href='/weekend-mode')
+      .auto-container
+          .mobile-header
+            .inner
+              .logo-side
+                .image-box
+                  .image
+                    img(src='../static/home_images/self-img.jpg' alt='')
+                .info
+                  .name Sahil Ghadiya
+                  .designation Web Developer
+              .social-links
+                .social-btn
+                  i.icon +
+                ul.links.clearfix
+                  li
+                    a(href='#')
+                      span.fab.fa-facebook-square
+                  li
+                    a(href='#')
+                      span.fab.fa-instagram
+                  li
+                    a(href='#')
+                      span.fab.fa-twitter-square
+                  li
+                    a(href='#')
+                      span.fab.fa-linkedin
+              .nav-toggler
+                img(src='../static/home_images/menu-icon.png' alt='')
+
+          .site-content-container.row.clearfix
+            // Left Bar
+            .left-bar.sticky-top.col-xl-3.col-lg-4.col-md-12
+              .left-inner
+                .nav-toggler
+                  img(src='../static/home_images/close-icon.png' alt='')
+                .left-upper
+                  .image-box
+                    .image
+                      img(src='../static/home_images/self-img.jpg' alt='')
+                    .social-links
+                      .social-btn
+                        i.icon +
+                      ul.links.clearfix
+                        li
+                          a(href='#')
+                            span.fab.fa-facebook-square
+                        li
+                          a(href='#')
+                            span.fab.fa-instagram
+                        li
+                          a(href='#')
+                            span.fab.fa-twitter-square
+                        li
+                          a(href='#')
+                            span.fab.fa-linkedin
+                  .info
+                    .name Sahil Ghadiya
+                    .designation
+                      i.dot
+                      |  Web Developer
+                .left-lower
+                  nav.main-nav
+                    ul#navigation-curr.navigation.scroll-nav
+                      li.home.current.home-curr
+                        a(href='#home-section') Home
+                      li.resume.home-curr
+                        a(href='#resume-section') Resume
+                      li.work.home-curr
+                        a(href='#work-section') Work
+                      li.stories.home-curr
+                        a(href='#stories-section') Stories
+                      li.contact.home-curr
+                        a(href='#contact-section') Contact
+                      li.message.home-curr
+                        a(href='/message') Message
+            // Right Content
+            .right-content.col-xl-9.col-lg-8.col-md-12
+              .right-inner
+                .content-container
+                  #home-section.home-content
+                    // -Download CV
+                    .download-cv
+                      a.theme-btn.download-btn(href='#')
+                        i.icon
+                          img(src='../static/home_images/cv-1.png' alt='')
+                        span.txt Downlod CV
+                    // Welcome
+                    .welcome
+                      h4 Hello and Welcome
+                      .text
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim laboris nisi ut aliquip ex ea commodo consequat.
+                    // About Me
+                    .about-me
+                      .row.clearfix
+                        // Skills
+                        .skills-column.col-xl-5.col-lg-12.col-md-12
+                          h4 Skills
+                          .skills
+                            .skill-block
+                              .skill-block-inner
+                                .skill-title HTML
+                                .bar
+                                  .bar-inner.count-bar.counted(data-percent='82%' style='width: 97%;')
+                                    .count-box.counted
+                                      span.count-text(data-stop='97' data-speed='2000') 97
+                                      | %
+                            .skill-block
+                              .skill-block-inner
+                                .skill-title BOOTSTRAP
+                                .bar
+                                  .bar-inner.count-bar.counted(data-percent='82%' style='width: 82%;')
+                                    .count-box.counted
+                                      span.count-text(data-stop='82' data-speed='2000') 82
+                                      | %
+                            .skill-block
+                              .skill-block-inner
+                                .skill-title NODEJS
+                                .bar
+                                  .bar-inner.count-bar.counted(data-percent='78%' style='width: 78%;')
+                                    .count-box.counted
+                                      span.count-text(data-stop='78' data-speed='2000') 78
+                                      | %
+                        // Expertise
+                        .expertise-column.col-xl-7.col-lg-12.col-md-12.ps-5
+                          h4 Expertise
+                          .expertise
+                            .row.clearfix
+                              .col-lg-6.col-md-6.col-sm-12
+                                ul
+                                  li install and configure
+                                  li web usability
+                                  li digital painting
+                                  li grid and layout
+                                  li mobile app design
+                                  li graphical design
+                                  li seo optimization
+                                  li social media
+                              .col-lg-6.col-md-6.col-sm-12
+                                ul
+                                  li ux and ui design
+                                  li logo design
+                                  li 3D animation
+                                  li audio video editing
+                                  li photography
+                                  li web development
+                                  li digital marketing
+                                  li app development
+                      // Features
+                      .features
+                        .row.clearfix
+                          // Feature Block
+                          .feature-block.col-xl-4.col-lg-4.col-md-6.col-sm-12
+                            .inner-box
+                              .icon-box
+                                span.icon
+                                  img(src='../static/home_images/lcd-2.png' alt='')
+                              h5 Design Concept
+                              .text Awesome designs for your company
+                          // Feature Block
+                          .feature-block.col-xl-4.col-lg-4.col-md-6.col-sm-12
+                            .inner-box
+                              .icon-box
+                                span.icon
+                                  img(src='../static/home_images/mobile-2.png' alt='')
+                              h5 App Development
+                              .text Well-coded apps suitable for your needs
+                          // Feature Block
+                          .feature-block.col-xl-4.col-lg-4.col-md-6.col-sm-12
+                            .inner-box
+                              .icon-box
+                                span.icon
+                                  img(src='../static/home_images/support-2.png' alt='')
+                              h5 Marketing
+                              .text Affordable, targeted media for everyone
+                      // Languages
+                      .languages
+                        h4 Languages
+                        .row.clearfix
+                          // Language Block
+                          .language-block.col-lg-6.col-md-6.col-sm-12
+                            .inner-box
+                              .graph-outer
+                                .progress.blue
+                                  span.progress-left
+                                    span.progress-bar
+                                  span.progress-right
+                                    span.progress-bar
+                                  .progress-value 98%
+
+                              .text
+                                | Hindi 
+                                br
+                                | Experience
+                          // Language Block
+                          .language-block.col-lg-6.col-md-6.col-sm-12
+                            .inner-box
+                              .graph-outer
+                                .progress.blue
+                                  span.progress-left
+                                    span.progress-bar.sec-progress-bar
+                                  span.progress-right
+                                    span.progress-bar
+                                  .progress-value 89%
+                              .text
+                                | English 
+                                br
+                                | Experience
+                    // End About Me
+                  // Resume Section
+                  #resume-section.resume-content
+                    .page-title.sec-title
+                      h1
+                        span Resume
+                    // Award
+                    .awards
+                      .main-title
+                        span.icon
+                          img(src='../static/home_images/award-1.png' alt='')
+                        span.txt Awards
+                      .row.clearfix
+                        // Block
+                        .award-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2021
+                            h5 Best Designer
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore
+                        // Block
+                        .award-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2020
+                            h5 Art of the Week
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore
+                        // Block
+                        .award-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2019
+                            h5 Creative Poster Award
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore
+                        // Block
+                        .award-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2018
+                            h5 Website of the Month
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt ut labore
+                    // Award
+                    .expertise
+                      .main-title
+                        span.icon
+                          img(src='../static/home_images/expertise-1.png' alt='')
+                        span.txt Expertise
+                      .row.clearfix
+                        // Block
+                        .expertise-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            ul
+                              li install and configure
+                              li web usability
+                              li digital painting
+                              li grid and layout
+                              li mobile app design
+                        // Block
+                        .expertise-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            ul
+                              li ux and ui design
+                              li logo design
+                              li 3D animation
+                              li graphical design
+                              li seo optimization
+                        // Block
+                        .expertise-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            ul
+                              li social media
+                              li audio video editing
+                              li photography
+                              li web development
+                              li digital marketing
+                    // Education
+                    .education
+                      .main-title
+                        span.icon
+                          img(src='../static/home_images/education-1.png' alt='')
+                        span.txt Education
+                      .row.clearfix
+                        // Block
+                        .edu-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2017  -  2021 
+                            h5 Master in Graphics
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt.
+                        // Block
+                        .edu-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2015  -  2017 
+                            h5 Web Design
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt.
+                        // Block
+                        .edu-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2011  -  2013 
+                            h5 University of Art
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt.
+                        // Block
+                        .edu-block.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2011  -  2012 
+                            h5 Photoshooting Course
+                            .text
+                              | Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod tempor incididunt.
+                    // Interests
+                    .interests
+                      .main-title
+                        span.icon
+                          img(src='../static/home_images/interest-1.png' alt='')
+                        span.txt Interests
+                      .row.clearfix
+                        // Block
+                        .interest-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon-box
+                              span.icon.def-icon
+                                img(src='../static/home_images/book-orange-1.png' alt='')
+                              span.icon.hvr-icon
+                                img(src='../static/home_images/book-1.png' alt='')
+                            h5 Reading
+                        // Block
+                        .interest-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon-box
+                              span.icon.def-icon
+                                img(src='../static/home_images/world-orange-1.png' alt='')
+                              span.icon.hvr-icon
+                                img(src='../static/home_images/world-1.png' alt='')
+                            h5 Travel
+                        // Block
+                        .interest-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon-box
+                              span.icon.def-icon
+                                img(src='../static/home_images/camera-orange-1.png' alt='')
+                              span.icon.hvr-icon
+                                img(src='../static/home_images/camera-1.png' alt='')
+                            h5 Photography
+                        // Block
+                        .interest-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon-box
+                              span.icon.def-icon
+                                img(src='../static/home_images/cycle-orange-1.png' alt='')
+                              span.icon.hvr-icon
+                                img(src='../static/home_images/cycle-1.png' alt='')
+                            h5 Cycling
+                        // Block
+                        .interest-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon-box
+                              span.icon.def-icon
+                                img(src='../static/home_images/hiking-orange-1.png' alt='')
+                              span.icon.hvr-icon
+                                img(src='../static/home_images/hiking-1.png' alt='')
+                            h5 Hiking
+                        // Block
+                        .interest-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon-box
+                              span.icon.def-icon
+                                img(src='../static/home_images/gaming-orange-1.png' alt='')
+                              span.icon.hvr-icon
+                                img(src='../static/home_images/gaming-1.png' alt='')
+                            h5 Gaming
+                    // Experience
+                    .education.experience
+                      .main-title
+                        span.icon
+                          img(src='../static/home_images/experience-1.png' alt='')
+                        span.txt Experience
+                      .row.clearfix
+                        // Block
+                        .edu-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2017  -  Current
+                            h5 Themeforest
+                            .text Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        // Block
+                        .edu-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2015  -  2017 
+                            h5 GraphicRiver
+                            .text Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        // Block
+                        .edu-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .date
+                              span 2012  -  2015 
+                            h5 CodeCanyon
+                            .text Lorem ipsum dolor sit amet, consectetur adipisicing.
+                  // Work Section
+                  #work-section.work-content
+                    .page-title.sec-title
+                      h1
+                        span Work
+                    // Portfolio Section
+                    section.portfolio-section
+                      // MixitUp Galery
+                      .mixitup-gallery
+                        // Filter
+                        .filters.clearfix
+                          ul#work-sec-curr.filter-tabs.filter-btns.clearfix
+                            li.filter.work-curr.active(data-role='button' data-filter='all') Show All
+                            li.filter.work-curr(data-role='button' data-filter='.brandings') Brandings
+                            li.filter.work-curr(data-role='button' data-filter='.print') Print
+                            li.filter.work-curr(data-role='button' data-filter='.motion') Motion
+                            li.filter.work-curr(data-role='button' data-filter='.websites') Websites
+                        #MixItUp0EA433.filter-list.row.clearfix
+                          // Portfolio block
+                          .portfolio-block.mix.all.websites.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-1.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-1.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.brandings.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-2.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-2.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.print.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-3.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-3.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.motion.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-4.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-4.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.brandings.motion.websites.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-5.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-5.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.print.motion.websites.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-6.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-6.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.brandings.print.websites.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-7.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-7.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.brandings.print.motion.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-8.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-8.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                          // Portfolio block
+                          .portfolio-block.mix.all.print.motion.websites.col-xl-4.col-lg-6.col-md-6.col-sm-12(style='display: inline-block;')
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/work-9.jpg' alt='')
+                              .hover-box
+                                .hvr-upper.clearfix
+                                  a.lightbox-image.theme-btn(href='../static/home_images/work-9.jpg' data-fancybox='gallery')
+                                    span.fa.fa-search
+                                  a.theme-btn.view-btn(href='work-single.html')
+                                    span.far.fa-file
+                                .hvr-lower
+                                  .title
+                                    a(href='work-single.html') Branding Design
+                                  .cat
+                                    a(href='#') Print
+                  // Stories Section
+                  #stories-section.stories-content
+                    .page-title.sec-title
+                      h1
+                        span Stories
+                    // Stories Section
+                    section.stories-section
+                      .row.clearfix
+                        .story-column.col-xl-6.col-lg-12.col-md-12
+                          // News block
+                          .news-block
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/blog-image-1.jpg' alt='')
+                              .over-box
+                                .hvr-lower
+                                  .title
+                                    a(href='story-single.html') Scotland&apos;s jungle islands are dealing with a major Covid hangover
+                                  .info.clearfix
+                                    .i-blk
+                                      span.icon.far.fa-comment
+                                      |  5 comments
+                                    .i-blk
+                                      span.icon.far.fa-user
+                                      |  admin
+                          // News block
+                          .news-block-two
+                            .inner-box
+                              .image
+                                a(href='story-single.html')
+                                  img(src='../static/home_images/blog-image-6.jpg' alt='')
+                              .text-box
+                                .title
+                                  a(href='story-single.html') &apos;It&apos;s the most hostile place&apos;: Life at the North Pole
+                          // News block
+                          .news-block-two
+                            .inner-box
+                              .image
+                                a(href='story-single.html')
+                                  img(src='../static/home_images/blog-image-7.jpg' alt='')
+                              .text-box
+                                .title
+                                  a(href='story-single.html') How much respect does Lakers&apos; title deserve?
+                          // News block
+                          .news-block-two
+                            .inner-box
+                              .image
+                                a(href='story-single.html')
+                                  img(src='../static/home_images/blog-image-8.jpg' alt='')
+                              .text-box
+                                .title
+                                  a(href='story-single.html') Cruise ships torn apart after coronavirus sell off
+                        .story-column.col-xl-6.col-lg-12.col-md-12
+                          // News block
+                          .news-block-two
+                            .inner-box
+                              .image
+                                a(href='story-single.html')
+                                  img(src='../static/home_images/blog-image-3.jpg' alt='')
+                              .text-box
+                                .title
+                                  a(href='story-single.html') Why does Hong Kong wrap its towers in &apos;cocoons&apos;?
+                          // News block
+                          .news-block-two
+                            .inner-box
+                              .image
+                                a(href='story-single.html')
+                                  img(src='../static/home_images/blog-image-4.jpg' alt='')
+                              .text-box
+                                .title
+                                  a(href='story-single.html') Using hand sanitizer may be giving you a false sense of security
+                          // News block
+                          .news-block-two
+                            .inner-box
+                              .image
+                                a(href='story-single.html')
+                                  img(src='../static/home_images/blog-image-5.jpg' alt='')
+                              .text-box
+                                .title
+                                  a(href='story-single.html') Why this space age airplane could change flying forever
+                          // News block
+                          .news-block
+                            .inner-box
+                              .image
+                                img(src='../static/home_images/blog-image-2.jpg' alt='')
+                              .over-box
+                                .hvr-lower
+                                  .title
+                                    a(href='story-single.html') Kaepernick&apos;s Nike jersey sells out quickly
+                                  .info.clearfix
+                                    .i-blk
+                                      span.icon.far.fa-comment
+                                      |  5 comments
+                                    .i-blk
+                                      span.icon.far.fa-user
+                                      |  admin
+                  // Contact Section
+                  #contact-section.contact-content
+                    .page-title.sec-title
+                      h1
+                        span Contact
+                    // Text
+                    .upper-text
+                      h4 Get in touch
+                      .text
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim laboris nisi ut aliquip ex ea commodo consequat.
+                    .info-box
+                      .row.clearfix
+                        // Info Block
+                        .info-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon
+                              span.fa.fa-envelope
+                            .text
+                              a(href='mailto:sahilghadiya0873@gmail.com') sahilghadiya0873@gmail.com
+                        // Info Block
+                        .info-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon
+                              span.fa.fa-phone-alt
+                            .text
+                              a(href='tel:+917016333194') +91 98765 43210
+                        // Info Block
+                        .info-block.col-xl-4.col-lg-6.col-md-6.col-sm-12
+                          .inner-box
+                            .icon
+                              span.fa.fa-map-marker-alt
+                            .text
+                              a(href='https://www.google.com/maps/place/Surat,+Gujarat/@21.1591425,72.6822102,11z/data=!3m1!4b1!4m5!3m4!1s0x3be04e59411d1563:0xfe4558290938b042!8m2!3d21.1702401!4d72.8310607') Surat,Gujrat
+                    // Form Box
+                    //- .form-box
+                      h4 Message me
+                      .contact-form
+                        form(method='post' action='/')
+                          .row.clearfix
+                            .field-group.col-lg-6.col-md-6.col-sm-12
+                              .form-group
+                                label.field-label(for='name')
+                                  span.icon.fa.fa-user
+                                input#name(type='text' name='name' value='' placeholder='Name' required='')
+                              .form-group
+                                label.field-label(for='email')
+                                  span.icon.far.fa-envelope
+                                input#email(type='email' name='email' value='' placeholder='E-mail' required='')
+                              .form-group
+                                label.field-label(for='website')
+                                  span.icon.fa.fa-link
+                                input#website(type='url' name='weburl' value='' placeholder='Website' required='')
+                            .field-group.col-lg-6.col-md-6.col-sm-12
+                              .form-group
+                                textarea#message(name='message' placeholder='Message' required='')
+                              .form-group
+                                button.theme-btn.btn-style-one(type='submit')
+                                  span Send message
+              // Copyright
+              .site-footer
+                .copyright &copy; 2022 Sahil Ghadiya, All Rights Reserved
+
+
+    //- Third-Section Right-Bottom Button 
+    div#topBtn(class="btn scroll-up-arrow")
+      a(href='#')
+        i(class='fas fa-arrow-up')
+
+  script
+    include ../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+    include ../static/js/script.js
+    include ../static/js/scroll-top.js

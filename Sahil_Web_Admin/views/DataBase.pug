@@ -1,0 +1,31 @@
+extends base.pug
+
+//- block style
+//-   style
+//-     include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+//-     include ../static/css/style.css
+//-     include ../static/css/mediaquery.css
+
+block data
+    table.table(style='width:80%; margin: auto; margin-top: 25px; ')
+        thead.thead-dark
+            tr
+                th Name
+                th Email
+                th Weburl
+                th Message
+        tbody
+            each row in record
+                tr
+                    td #{row.name}
+                    td #{row.email}
+                    td #{row.weburl}
+                    td #{row.message}
+        //- tbody
+        //-     if record
+        //-         each row in record
+        //-             tr
+        //-                 td #{row.name}
+        //-                 td #{row.name}
+        //-                 td #{row.name}
+        //-                 td #{row.name}

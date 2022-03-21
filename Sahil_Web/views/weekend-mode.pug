@@ -1,0 +1,57 @@
+extends base.pug
+
+block style
+  style
+    include ../node_modules/bootstrap/dist/css/bootstrap.min.css
+    include ../static/css/style.css
+    include ../static/css/weekend-mode.css
+
+block body
+  .weekend-mode
+    .body-bg(style='background-image: url(../static/weekend_mode/weekend-bg.jpg);')
+    .page-wrapper
+      // Preloader
+      .preloader(style='display: none;')
+        .icon
+      // Site Container
+      .site-container
+        .mode-switch
+          .switcher.clearfix
+            .left-text Weekend Mode
+            .switch-btn
+              .btn-inner
+                .circle
+                .txt ON
+              a(href='/')
+        .auto-container
+          .weekend-content.row.clearfix
+            // Text Column
+            .text-column.col-lg-6.col-md-12.col-sm-12
+              .inner
+                h3 Me on Weekends :)
+                .text
+                  p
+                    | My hobby is riding a my motorcycle. I ride a dark orange Kawasaki W800. The engine is very powerful. 
+                    br
+                    |  It is not a fashionable racing motorcycle,; it is an old styled nostalgic one. I think that my favorite uncle had a similar one when I was a child.
+                  p
+                    | When I first saw the Kawasaki W800 in a motorcycle shop 6 six months ago, I fell in love with her. I felt that she was saying, &ldquo;Get me, please.&rdquo;. Please But Unfortunately, the price was over my budget. So, I decided to save money to get her. Finally she became mine last month.
+                  p
+                    | I ride her everyday to commute. I live in Gujarat and my work place is in Surat.
+                  p
+                    | The faster I run ride, the more strongly the wind pushes against my body. One On the highway, It is fun though, but it is not easy.
+                  p
+                    | The best season for riding a motorcycle is spring. I can feel comfortable, warm wind against my face and enjoy the cherry blossoms beside the highway.
+            // Image Column
+            .image-column.col-lg-6.col-md-12.col-sm-12
+              .inner
+                .image-layer(style='background-image: url(../static/weekend_mode/weekend-image.jpg);')
+      // End Site Container
+    // End pagewrapper
+    // Scroll to top 
+    div#topBtn(class="btn scroll-up-arrow")
+      a(href='#')
+        i(class='fas fa-arrow-up')
+
+  script
+    include ../static/js/scroll-top.js
